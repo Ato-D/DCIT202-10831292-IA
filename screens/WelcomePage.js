@@ -21,7 +21,7 @@ function WelcomePage({ navigation }) {
         >
             <View style={styles.welcome} >
                 <Text style={styles.welcomeText}>
-                    Shop With Jersey Hunt 
+                     Jersey Hunt 
                 </Text>
                 <Text style={styles.sloganText}>
                      {/*Shop With Jersey Hunt */}
