@@ -52,7 +52,7 @@ function Tabs() {
                     )
                 }}
             />
-            <Tab.Screen
+            {/* <Tab.Screen
                 name="Search"
                 component={Search}
                 options={{
@@ -99,7 +99,7 @@ function Tabs() {
                         </View>
                     )
                 }}
-            />
+            /> */}
             <Tab.Screen
                 name="Cart"
                 component={Cart}

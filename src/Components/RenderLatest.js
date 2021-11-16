@@ -11,7 +11,7 @@ function RenderLatest({ navigation }) {
             >
             <View style={styles.head} >
                 <Text style={styles.headMain} >
-                    Latest Shoes
+                    Latest Jerseys
                 </Text>
                 <TouchableOpacity onPress={() => navigation.navigate('Category') } >
                     <Text style={styles.headBtn}>

@@ -7,15 +7,12 @@ function MainCategory() {
     const [category, setCategory] = useState("EXPLORE")
 
     const genders = [
-        "EXPLORE",
-        "MEN",
-        "WOMEN",
-        "YOUTH",
-        "CHILD",
-        "INFANT",
-        "PRESCHOOL",
-        "TODDLER",
-        "UNISEX",
+        "EXPLORE ",
+        "LA LIGA",
+        "EPL",
+        "BUNDESE LEAGUE",
+        "SERIE A",
+        "LIGUE 1",
     ]
 
     const renderItem = (item) => (
@@ -27,7 +24,7 @@ function MainCategory() {
                 styles.categoryText,
                 { color: category === item ? COLORS.black : COLORS.darkgray }
             ]} >
-                {`${item} Shoes `}
+                {`${item} JERSEYS `}
             </Text>
         </TouchableOpacity>
     )
@@ -35,10 +32,7 @@ function MainCategory() {
     return (
         <View style={styles.container} >
             <Text style={styles.textMain} >
-                Athletic Shoes
-            </Text>
-            <Text style={styles.textMain}>
-                Collection
+               Available Jerseys
             </Text>
             <FlatList
                 data={genders}

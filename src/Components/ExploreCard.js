@@ -3,10 +3,12 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, ImageBackground } from
 import { ICONS } from '../../assets/icon';
 import images from '../../assets/images/images';
 import { COLORS, FONTS, HEIGHT, SIZES, WIDTH } from '../../constants/theme';
+import chelsea from '../../assets/Chelsea.jpg'
+// import mancity from '../ManCity.jpg'
 
 function ExploreCard({ item, navigation }) {
 
-    // console.log(item.image)
+    console.log(item.image.original)
 
     return (
         <TouchableOpacity 
@@ -16,9 +18,12 @@ function ExploreCard({ item, navigation }) {
             }) }
             >
             <ImageBackground
-                source={{ uri: item.image.original }}
+                source={item.image.original}
                 resizeMode="contain"
-                style={styles.imageContainer}
+                style={[
+                    styles.imageContainer,
+                    StyleSheet.absoluteFillObject
+                ]}
             >
                 <View style={styles.iconContainer} >
                     <Image
@@ -31,10 +36,10 @@ function ExploreCard({ item, navigation }) {
             <View style={styles.detail} >
                 <View>
                     <Text style={styles.name}>
-                        {item.name}
+                        {item.team}
                     </Text>
                     <Text style={styles.category} >
-                        {`${item.gender} Shoe`}
+                        {`${item.gender} jerseys`}
                     </Text>
                 </View>
                 <View style={styles.priceColors} >

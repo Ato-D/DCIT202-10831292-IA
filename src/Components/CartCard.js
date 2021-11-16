@@ -16,7 +16,7 @@ function CartCard({ item, navigation }) {
         >
             <View style={styles.imageContainer} >
                 <Image
-                    source={{ uri: item.image.original }}
+                    source={item.image.original }
                     resizeMode="contain"
                     style={styles.image}
                 />
@@ -24,10 +24,10 @@ function CartCard({ item, navigation }) {
             <View style={styles.detail} >
                 <View style={styles.detailHead}>
                     <Text numberOfLines={1} style={styles.name} >
-                        {item.name}
+                        {item.team}
                     </Text>
                     <Text style={styles.category}>
-                        {`${item.gender} Shoe`}
+                        {`${item.gender} Jersey`}
                     </Text>
                 </View>
                 <View style={styles.priceContainer}>

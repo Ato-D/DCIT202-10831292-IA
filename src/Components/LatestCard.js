@@ -14,9 +14,12 @@ function LatestCard({ navigation, item }) {
             })}
             >
             <Image
-                source={{ uri: item.image.original }}
+                source={item.image.original}
                 resizeMode="cover"
-                style={styles.image}
+                style={[
+                    styles.image,
+                    StyleSheet.absoluteFillObject
+                ]}
             />
         </TouchableOpacity>
     )
