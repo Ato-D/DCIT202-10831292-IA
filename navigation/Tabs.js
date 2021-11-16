@@ -4,8 +4,6 @@ import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom
 import Home from '../screens/Home'
 import { COLORS, SIZES } from '../constants/theme'
 import { ICONS } from '../assets/icon'
-import Search from '../screens/Search'
-import Favourites from '../screens/Favourites'
 import Cart from '../screens/Cart'
 import Profile from '../screens/Profile'
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View, ImageBackground, Dimensions, TouchableOpacity, YellowBox } from 'react-native';
+import { color } from 'react-native-reanimated';
 import images from '../assets/images/images';
 import { BUTTONS, COLORS, FONTS, HEIGHT, SIZES } from '../constants/theme';
 
@@ -21,15 +22,18 @@ function WelcomePage({ navigation }) {
         >
             <View style={styles.welcome} >
                 <Text style={styles.welcomeText}>
-                     Jersey Hunt 
+                    JERSEY HUNT 
                 </Text>
                 <Text style={styles.sloganText}>
-                     {/*Shop With Jersey Hunt */}
+                     Shop With Jersey Hunt 
                 </Text>
             </View>
             <View style={styles.btnContainer}>
                 <TouchableOpacity 
                     style={styles.btnPrimary} 
+                    onPress={() => navigation.navigate('Auth',{
+                        auth: true
+                    })}
                     >
                     <Text style={styles.btnPrimaryText}>
                         Sign Up
@@ -37,6 +41,9 @@ function WelcomePage({ navigation }) {
                 </TouchableOpacity>
                 <TouchableOpacity 
                     style={styles.btnSecondary} 
+                    onPress={() => navigation.navigate('Auth', {
+                        auth: false
+                    })}
                     >
                     <Text style={styles.btnSecondaryText} >
                         Sign In
@@ -54,15 +61,16 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around'
     },
     welcomeText: {
-        ...FONTS.h4,
+        ...FONTS.h1,
         fontWeight: 'bold',
         textAlign: 'center',
         color: 'yellow',
     },
     sloganText: {
-        ...FONTS.body3,
+        ...FONTS.H2,
         fontWeight: "200",
-        textAlign: 'center'
+        textAlign: 'center',
+        color: 'white',
     },
     btnContainer: {
 

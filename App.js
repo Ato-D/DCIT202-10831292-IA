@@ -9,7 +9,7 @@ import Home from './screens/Home';
 import Context, { AuthContext } from './src/Components/Context';
 import Tabs from './navigation/Tabs';
 import CategoryPage from './screens/CategoryPage';
-import SneakerPage from './screens/SneakerPage';
+import ProductPage from './screens/ProductPage';
 
 
 
@@ -37,6 +37,8 @@ export default function App() {
               isSignedIn == true ? (
                 <>
                   <Stack.Screen name="Home" component={Tabs} />
+                  <Stack.Screen name="Category" component={CategoryPage} />
+                  <Stack.Screen name="Sneaker" component={ProductPage} />
                 </>
               ) : (
                 <>
